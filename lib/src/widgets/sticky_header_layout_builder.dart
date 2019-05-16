@@ -1,7 +1,7 @@
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_sticky_header/src/rendering/sticky_header_constraints.dart';
 import 'package:flutter_sticky_header/src/rendering/sticky_header_layout_builder.dart';
+import 'package:flutter_web/rendering.dart';
+import 'package:flutter_web/widgets.dart';
 
 typedef Widget StickyHeaderLayoutWidgetBuilder(
     BuildContext context, StickyHeaderConstraints constraints);
@@ -96,16 +96,16 @@ class _StickyHeaderLayoutBuilderElement extends RenderObjectElement {
           built = widget.builder(this, constraints);
           debugWidgetBuilderValue(widget, built);
         } catch (e, stack) {
-          built = ErrorWidget
-              .builder(_debugReportException('building $widget', e, stack));
+          built = ErrorWidget.builder(
+              _debugReportException('building $widget', e, stack));
         }
       }
       try {
         _child = updateChild(_child, built, null);
         assert(_child != null);
       } catch (e, stack) {
-        built = ErrorWidget
-            .builder(_debugReportException('building $widget', e, stack));
+        built = ErrorWidget.builder(
+            _debugReportException('building $widget', e, stack));
         _child = updateChild(null, built, slot);
       }
     });

@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_sticky_header/flutter_sticky_header.dart';
+import 'package:flutter_web/material.dart';
 
 void main() => runApp(new MyApp());
 
@@ -199,8 +199,7 @@ class MainScreen extends StatelessWidget {
           height: 44.0,
           width: 44.0,
           child: GestureDetector(
-            onTap: () => Scaffold
-                .of(context)
+            onTap: () => Scaffold.of(context)
                 .showSnackBar(new SnackBar(content: Text('$index'))),
             child: new CircleAvatar(
               backgroundColor: Colors.orangeAccent,
@@ -216,8 +215,7 @@ class MainScreen extends StatelessWidget {
   Widget _buildAnimatedHeader(
       BuildContext context, int index, SliverStickyHeaderState state) {
     return GestureDetector(
-      onTap: () => Scaffold
-          .of(context)
+      onTap: () => Scaffold.of(context)
           .showSnackBar(new SnackBar(content: Text('$index'))),
       child: new Container(
         height: 60.0,

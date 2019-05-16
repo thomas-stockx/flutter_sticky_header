@@ -1,5 +1,5 @@
-import 'package:flutter/rendering.dart';
 import 'package:flutter_sticky_header/src/widgets/sliver_sticky_header.dart';
+import 'package:flutter_web/rendering.dart';
 
 /// Immutable layout constraints for sticky header
 class StickyHeaderConstraints extends BoxConstraints {

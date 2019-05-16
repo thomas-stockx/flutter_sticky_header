@@ -1,6 +1,6 @@
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_sticky_header/src/rendering/sticky_header_constraints.dart';
+import 'package:flutter_web/rendering.dart';
+import 'package:flutter_web/widgets.dart';
 
 class RenderStickyHeaderLayoutBuilder extends RenderBox
     with RenderObjectWithChildMixin<RenderBox> {
